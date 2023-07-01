@@ -11,13 +11,27 @@ const rl = readline.createInterface({
 });
 
 const CONSONANTS = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'];
+
 const pigLatin = (word) => {
   const lowerWord = word.toLowerCase().trim();
   const firstLetter = lowerWord[0];
-  if (CONSONANTS.includes(lowerWord[0])) {
-    return word.slice(1) + word[0] + 'ay';
+  const isVowel = ['a', 'e', 'i', 'o', 'u'].includes(firstLetter);
+
+  if (isVowel) {
+    return `${lowerWord}yay`;
+  } else {
+    let prefix = '';
+    let suffix = lowerWord;
+    while (CONSONANTS.includes(suffix[0])) {
+      prefix += suffix[0];
+      suffix = suffix.substring(1);
+    }
+    return `${suffix}${prefix}ay`;
   }
 }
+
+console.log(pigLatin('car'));
+
 
 
 // the first function called in the program to get an input from the user
