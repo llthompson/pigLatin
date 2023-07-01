@@ -10,19 +10,22 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-
+const CONSONANTS = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'];
 const pigLatin = (word) => {
-
-  // Your code here
-
+  const lowerWord = word.toLowerCase().trim();
+  const firstLetter = lowerWord[0];
+  if (CONSONANTS.includes(lowerWord[0])) {
+    return word.slice(1) + word[0] + 'ay';
+  }
 }
+
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
 // to close it ctrl + C
 const getPrompt = () => {
   rl.question('word ', (answer) => {
-    console.log( pigLatin(answer) );
+    console.log(pigLatin(answer));
     getPrompt();
   });
 }

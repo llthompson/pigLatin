@@ -1,19 +1,38 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <script src="main.js"></script>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <hr/>
-    <div id="display-element"></div>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Montserrat:wght@100;300;400;500;600;700&family=Mulish:wght@300;400;700&family=Pacifico&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300&family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@100;300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Pig Latin</title>
+</head>
+
+<body>
+  <h1>Pig Latin!</h1>
+  <hr />
+  <div id="display-element"></div>
+
+  <main>
     <form>
       <input id="user-input" type="text">
       <!-- How do you get this input sent to the pigLatin() function? -->
       <button onclick="pigLatin()">Translate</button>
-    </form>  
-    <hr/>
-  </body>
+    </form>
+
+    <div id="result-container">
+      <h2 id="result"></h2>
+    </div>
+  </main>
+
+  <hr />
+
+  <script src="main.js"></script>
+</body>
+
 </html>
