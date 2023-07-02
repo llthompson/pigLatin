@@ -19,20 +19,19 @@
   <div id="display-element"></div>
 
   <main>
-    <form>
-      <input id="user-input" type="text">
-      <!-- How do you get this input sent to the pigLatin() function? -->
-      <button onclick="pigLatin()">Translate</button>
-    </form>
+    <input id="user-input" type="text">
+    <!-- How do you get this input sent to the pigLatin() function? -->
+    <button id="lets-go">Translate</button>
+    <button onclick="resetGame()">Again!</button>
 
     <div id="result-container">
-      <p id="result">Result: </p>
+      <h2 id="result"></h2>
     </div>
   </main>
 
   <hr />
 
-  <script src="piglatin.js"></script>
+  <script src="result.js"></script>
 </body>
 
 </html>
