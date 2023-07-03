@@ -28,6 +28,7 @@ main {
     border-radius: 6px;
     text-align: center;
     min-height: 159px;
+    
 }
 
 input {
@@ -55,4 +56,11 @@ button {
     background-color: white;
     width: fit-content;
     margin: 10px;
+}
+
+
+@media (max-width: 550px) {
+    main {
+        max-width: 80%;
+    }
 }
